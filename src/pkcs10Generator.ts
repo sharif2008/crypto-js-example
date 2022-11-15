@@ -47,7 +47,7 @@ export async function createPKCS10({ enrollmentID, organizationUnit, organizatio
   }
 
   console.log(result.privateKey);
-
+  console.log(typeof crypto.subtle.importKey);
   return result;
 }
 

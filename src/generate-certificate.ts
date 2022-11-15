@@ -11,7 +11,7 @@ const {
     AttributeTypeAndValue,
     BasicConstraints,
     Extension,
-    getAlgorithmParameters
+    getAlgorithmParameters,
 } = pkijs;
 
 const webcrypto = new WebCrypto();
@@ -153,7 +153,7 @@ function formatPEM(pemString) {
     const stringLength = pemString.length;
     let resultString = '';
 
-    for (let i = 0, count = 0; i < stringLength; i++ , count++) {
+    for (let i = 0, count = 0; i < stringLength; i++, count++) {
         if (count > 63) {
             resultString = `${resultString}\r\n`;
             count = 0;
